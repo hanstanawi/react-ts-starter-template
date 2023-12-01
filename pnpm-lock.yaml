@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^1.0.8
     version: 1.0.8(react-dom@18.2.0)(react@18.2.0)
   '@storybook/addon-themes':
-    specifier: ^7.5.3
-    version: 7.5.3(@types/react-dom@18.2.17)(@types/react@18.2.34)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^7.6.2
+    version: 7.6.2
   '@storybook/blocks':
     specifier: ^7.5.3
     version: 7.5.3(@types/react-dom@18.2.17)(@types/react@18.2.34)(react-dom@18.2.0)(react@18.2.0)
@@ -3180,30 +3180,10 @@ packages:
       ts-dedent: 2.2.0
     dev: true
 
-  /@storybook/addon-themes@7.5.3(@types/react-dom@18.2.17)(@types/react@18.2.34)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-lwait7l3moPTaFQoG+7Pn5bL1a3tqAmXrMJkbluJn0DZyTXKKWVc1Cwak5o1UD44LLTBhql3BNLGi3BR0fB2fQ==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
+  /@storybook/addon-themes@7.6.2:
+    resolution: {integrity: sha512-aRDw9dwvR9poZ555InUJMbdccRSeJrr8rV9YLbZlDbpualrClGhfiX2qDME0AaVfa5bEOe20L4zh42yKT0YqeQ==}
     dependencies:
-      '@storybook/client-logger': 7.5.3
-      '@storybook/components': 7.5.3(@types/react-dom@18.2.17)(@types/react@18.2.34)(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/core-events': 7.5.3
-      '@storybook/manager-api': 7.5.3(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.5.3
-      '@storybook/theming': 7.5.3(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/types': 7.5.3
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
       ts-dedent: 2.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
     dev: true
 
   /@storybook/addon-toolbars@7.6.2:

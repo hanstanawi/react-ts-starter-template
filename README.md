@@ -29,7 +29,7 @@ This starter template includes:
    Tips: You can use [degit](https://github.com/Rich-Harris/degit) to clone this repo without running `git clone`. [Learn more](https://github.com/Rich-Harris/degit)
 
    ```bash
-   degit hanstanawi/react-ts-starter-template your-app-name
+   npx degit hanstanawi/react-ts-starter-template your-app-name
    ```
 
    or simply use this template on GitHub when creating new repository.
@@ -69,6 +69,25 @@ You can run unit tests manually on your machine:
 - Unit test coverage
   ```bash
   pnpm test:cov
+  ```
+
+### Environment Variables
+
+Vite offers a different approach of defining and using `.env` variables compared to Webpack. It exposes env variables on the special `import.meta.env` object Learn more about Vite environment variables [here](https://vitejs.dev/guide/env-and-mode)
+
+- Defining your environment variables
+  ```
+  VITE_SOME_KEY=123
+  ```
+- Using environment variables in code
+
+  ```ts
+  import.meta.env.VITE_SOME_KEY;
+  ```
+
+- Accessing the mode the app is running in
+  ```ts
+  import.meta.env.MODE;
   ```
 
 ### Switching CSS Frameworks / UI Library
@@ -169,6 +188,15 @@ This starter template uses Lucide React icons as the default icons library. You 
 2. Install other icon library e.g. [React Icons](https://react-icons.github.io/react-icons/)
    ```bash
    pnpm add react-icons
+   ```
+
+### Storybook
+This repository contains a separate branch of `with-storybook` if you want to integrate Storybook with this starter template.
+
+1. Clone repo using [degit](https://github.com/Rich-Harris/degit)
+   
+   ```bash
+  npx degit hanstanawi/react-ts-starter-template#with-storybook your-app-name 
    ```
 
 ### Learn More

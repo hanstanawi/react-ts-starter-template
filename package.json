@@ -1,6 +1,6 @@
 {
   "name": "react-ts-starter-template",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "engines": {
     "node": ">= 18.x"
   },
@@ -49,16 +49,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.3",
-    "@storybook/addon-essentials": "^7.6.2",
-    "@storybook/addon-interactions": "^7.6.4",
-    "@storybook/addon-links": "^7.6.4",
-    "@storybook/addon-onboarding": "^1.0.8",
-    "@storybook/addon-themes": "^7.6.2",
-    "@storybook/blocks": "^7.5.3",
-    "@storybook/react": "^7.5.3",
-    "@storybook/react-vite": "^7.5.3",
-    "@storybook/testing-library": "^0.2.2",
+    "@commitlint/config-conventional": "^18.4.2",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
@@ -80,7 +71,6 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-storybook": "^0.6.15",
     "eslint-plugin-testing-library": "^6.1.2",
     "husky": "^8.0.3",
     "identity-obj-proxy": "^3.0.0",
@@ -92,8 +82,7 @@
     "postcss": "^8.4.31",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
-    "storybook": "^7.5.3",
-    "tailwindcss": "^3.3.6",
+    "tailwindcss": "^3.3.5",
     "ts-jest": "^29.1.1",
     "typescript": "^5.3.3",
     "vite": "^4.5.0",

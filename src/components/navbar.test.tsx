@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import Navbar from '.';
+import Navbar from './navbar';
 
 function renderComponent() {
   render(

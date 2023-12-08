@@ -51,7 +51,7 @@
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@storybook/addon-essentials": "^7.6.2",
-    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-interactions": "^7.6.4",
     "@storybook/addon-links": "^7.6.4",
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/addon-themes": "^7.6.2",

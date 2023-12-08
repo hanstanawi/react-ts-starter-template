@@ -20,7 +20,6 @@ This starter template includes:
   - [Lint Staged](https://github.com/lint-staged/lint-staged) - Format & lint your code before committing, block commit if issues are detected
 - [Github Actions](https://docs.github.com/en/actions) - Check, test, and build your code automatically on push and PR
 - [Dependabot](https://github.com/dependabot) - Create pull-request to update your dependencies
-- [Storybook](https://storybook.js.org/) - Document and test your components in isolated environment
 - [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) - Unit test your components
 
 ### Getting Started
@@ -71,23 +70,6 @@ You can run unit tests manually on your machine:
   ```bash
   pnpm test:cov
   ```
-
-### Storybook
-
-This starter template comes with Storybook setup out of the box, a library to build, document, and test your components in an isolated environment. It is a great tool where you can share and document your components with your teammates or design team for design system and user experience purposes. [Learn more about Storybook.](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/)
-
-- Run storybook:
-
-  ```bash
-  pnpm storybook
-  ```
-
-- Build storybook:
-  ```bash
-  pnpm storybook:build
-  ```
-
-You don't have to use Storybook in your project if you are building a small project or application. However, it's recommended to use Storybook as a component documentation tool if you are building a large project or application.
 
 ### Switching CSS Frameworks / UI Library
 

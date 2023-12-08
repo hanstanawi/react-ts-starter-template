@@ -177,26 +177,14 @@ This docs guides you a quick start to setup Chakra UI on this project. To learn 
 
 3. You can start using Chakra UI components in the project.
 
-### Icons
-
-This starter template uses Lucide React icons as the default icons library. You can switch to other React icons library such as [React Icons](https://react-icons.github.io/react-icons/) or [FontAwesome Icons](https://fontawesome.com/v5/docs/web/use-with/react)
-
-1. Simply uninstall Lucide
-   ```bash
-   pnpm remove lucide-react
-   ```
-2. Install other icon library e.g. [React Icons](https://react-icons.github.io/react-icons/)
-   ```bash
-   pnpm add react-icons
-   ```
-
 ### Storybook
+
 This repository contains a separate branch of `with-storybook` if you want to integrate Storybook with this starter template.
 
 1. Clone repo using [degit](https://github.com/Rich-Harris/degit)
-   
-   ```bash
-  npx degit hanstanawi/react-ts-starter-template#with-storybook your-app-name 
+
+   ```
+   npx degit hanstanawi/react-ts-starter-template#with-storybook
    ```
 
 ### Learn More

@@ -45,7 +45,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1",
-    "tailwind-merge": "^2.1.0"
+    "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",

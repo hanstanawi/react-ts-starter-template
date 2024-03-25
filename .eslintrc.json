@@ -5,13 +5,13 @@
   },
   "extends": [
     "eslint:recommended",
-    "airbnb",
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -23,7 +23,13 @@
     "sourceType": "module",
     "project": "tsconfig.json"
   },
-  "plugins": ["simple-import-sort", "react", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "simple-import-sort",
+    "react-refresh",
+    "jsx-a11y",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "import/prefer-default-export": 0,
@@ -37,6 +43,7 @@
     "@typescript-eslint/no-shadow": 0,
     "@typescript-eslint/no-unused-vars": 1,
     "no-restricted-syntax": 0,
+    "react-refresh/only-export-components": 1,
     "prettier/prettier": [
       0,
       {

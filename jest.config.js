@@ -3,7 +3,8 @@ module.exports = {
   setupFiles: ['whatwg-fetch'],
   // The test environment that will be used for testing, jsdom for browser environment
   // https://jestjs.io/docs/configuration#testenvironment-string
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-environment-jsdom',
+  preset: 'ts-jest',
   // A list of paths to directories that Jest should use to search for files in
   // https://jestjs.io/docs/configuration#roots-arraystring
   roots: ['<rootDir>/src/'],
@@ -17,7 +18,7 @@ module.exports = {
   },
   // A list of paths to modules that run some code to configure or set up the testing framework before each test file in the suite is executed
   // https://jestjs.io/docs/configuration#setupfilesafterenv-array
-  setupFilesAfterEnv: ['<rootDir>/test/jest.setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/tests/jest.setup.ts'],
   // Code coverage config
   // https://jestjs.io/docs/configuration#collectcoveragefrom-array
   coverageDirectory: '<rootDir>/coverage/',
@@ -32,9 +33,6 @@ module.exports = {
   moduleNameMapper: {
     // Handle svg files
     '^.+\\.svg$': 'jest-svg-transformer',
-    // Handle CSS imports (with CSS modules)
-    // https://jestjs.io/docs/webpack#mocking-css-modules
-    '^.+\\.module\\.(css|sass|scss|less)$': 'identity-obj-proxy',
     // Handle CSS imports (without CSS modules)
     '^.+\\.(css|sass|scss|less)$': '<rootDir>/__mocks__/styleMock.js',
     // Handle static assets

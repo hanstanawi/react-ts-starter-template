@@ -13,7 +13,6 @@ This starter template includes:
 - [Vite](https://vitejs.dev/guide/) - Blazingly fast frontend build tool
 - [React Router](https://reactrouter.com/en/main) - Client side routing solution for React
 - [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/) - Find & fix problems in the codebase and format code automatically on save
-  - [Airbnb Config](https://github.com/airbnb/javascript) - Airbnb style guide
 - [Lucide React](https://lucide.dev/) - Beautiful and consistent open-source icons for React
 - [Husky](https://typicode.github.io/husky/) - Git hooks tool
   - [Commit Lint](https://commitlint.js.org/#/) - Force devs to follow conventional commit message

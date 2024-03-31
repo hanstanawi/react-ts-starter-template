@@ -4,7 +4,6 @@ import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App';
 import Homepage from './pages/home';
-import LearnMore from './pages/learn-more';
 import NotFoundPage from './pages/not-found';
 
 function renderComponent(index: number = 0) {
@@ -20,14 +19,10 @@ function renderComponent(index: number = 0) {
             element: <Homepage />,
             index: true,
           },
-          {
-            path: 'learn-more',
-            element: <LearnMore />,
-          },
         ],
       },
     ],
-    { initialEntries: ['/', '/learn-more'], initialIndex: index },
+    { initialEntries: ['/'], initialIndex: index },
   );
 
   render(<RouterProvider router={router} />);

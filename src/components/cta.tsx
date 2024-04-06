@@ -1,12 +1,12 @@
-import { GitBranchIcon } from 'lucide-react';
+import { LucideGithub } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import Button from './ui/button';
 
 export default function CTA() {
   return (
-    <div className="mt-8 flex flex-col items-center justify-center gap-y-4">
-      <div className="flex items-center gap-x-4">
+    <div className="mt-8 flex w-full flex-col items-center justify-center gap-y-4">
+      <div className="flex items-center justify-center gap-x-4">
         <Link
           aria-label="Deploy to Vercel"
           rel="noopener noreferrer"
@@ -31,24 +31,24 @@ export default function CTA() {
           />
         </Link>
       </div>
-      <div className="flex w-full items-center gap-x-8">
+      <div className="flex w-full items-center justify-center gap-x-8">
         <Link
           to="https://github.com/hanstanawi/react-ts-starter-template/generate"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full"
         >
-          <Button className="text-sm">Use This Template</Button>
+          <Button className="rounded-md border-gray-200 text-sm dark:border-none">
+            Use This Template
+          </Button>
         </Link>
         <Link
           to="https://github.com/hanstanawi/react-ts-starter-template"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full"
         >
-          <Button className="flex items-center gap-x-2 text-sm">
-            <GitBranchIcon size={12} className="inline" />
-            Open in Github
+          <Button className="flex items-center gap-x-2 rounded-md border-gray-200 text-sm dark:border-none">
+            <LucideGithub size={16} className="inline" />
+            Open on Github
           </Button>
         </Link>
       </div>

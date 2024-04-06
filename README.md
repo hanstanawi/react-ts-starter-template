@@ -196,4 +196,3 @@ To learn more about React and TypeScript, take a look at the following resources
 - [Learn React with TypeScript](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup) - learn about integrating React with TypeScript
 - [Learn Testing Library](https://testing-library.com/docs/queries/about/#priority) - learn about Testing Library core queries
 - [React Testing Library tips](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) - tips from Kent C. Dodds about Testing Library
-- [Getting Started with Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/) - a guide to get started with Storybook with React

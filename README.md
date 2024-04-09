@@ -1,6 +1,10 @@
-## React + TypeScript Starter Template
-
-React starter template with TypeScript and TailwindCSS to kickstart your frontend project.
+<div align="center">
+  <img alt="banner" src="public/banner.png" width="100%" />
+</div>
+<h1 align="center">
+  React + TypeScript Starter Template
+</h1>
+<p align="center">React starter template with TypeScript and TailwindCSS to kickstart your frontend project.</p>
 
 ### What's inside?
 
@@ -89,102 +93,19 @@ Vite offers a different approach of defining and using `.env` variables compared
   import.meta.env.MODE;
   ```
 
-### Switching CSS Frameworks / UI Library
+### Other starter template kits
 
-"What if I don't want to use Tailwind?"
+This repository contains separate branches of other starter template kits
 
-You can use another React CSS framework or UI library, like [Chakra UI](https://chakra-ui.com/), by simply removing Tailwind config and its dev dependencies.
+- Storybook
 
-1. Remove Tailwind config
-   ```bash
-   rm -rf tailwind.config.ts postcss.config.js
-   ```
-2. Remove Tailwind directives on the `src/index.css`
+  Integrate Storybook with this starter template. Checkout `with-storybook` branch to view.
 
-   You need to remove these lines of code
+  Clone repo using [degit](https://github.com/Rich-Harris/degit)
 
-   ```css
-   @tailwind base;
-   @tailwind components;
-   @tailwind utilities;
-   ```
-
-3. Uninstall dev dependencies on `package.json`
-   ```bash
-   pnpm remove tailwindcss postcss prettier-plugin-tailwindcss autoprefixer tailwind-merge clsx
-   ```
-4. Remove Tailwind `cn` utility function
-   ```bash
-   rm -rf src/lib/utils.ts
-   ```
-
-Now you have removed TailwindCSS config and its dependencies, we can add another UI library or CSS framework, in this example, we are going to use [Chakra UI](https://chakra-ui.com/) a great choice for a simple and good-to-go component library to build React components.
-
-This docs guides you a quick start to setup Chakra UI on this project. To learn more about [Chakra UI](https://chakra-ui.com/) you can visit Chakra UI [documentation](https://chakra-ui.com/docs/components)
-
-1. Install Chakra UI dependencies
-   ```bash
-   pnpm add @chakra-ui/react @emotion/react @emotion/styled framer-motion
-   ```
-2. Setup `Chakra` Provider
-
-   Add `ChakraProvider` at the root of the application. Go to `src` directory and inside `main.tsx`, wrap `ChakraProvider` around `<App />` component
-
-   `src/main.tsx`
-
-   ```tsx
-   import './index.css';
-
-   import React from 'react';
-   import ReactDOM from 'react-dom/client';
-   import { ChakraProvider } from '@chakra-ui/react';
-   import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-   import AboutPage from '@/pages/about';
-   import Homepage from '@/pages/home';
-   import NotFoundPage from '@/pages/not-found';
-
-   import App from './App';
-
-   const router = createBrowserRouter([
-     {
-       path: '/',
-       element: <App />,
-       errorElement: <NotFoundPage />,
-       children: [
-         {
-           path: '',
-           element: <Homepage />,
-           index: true,
-         },
-         {
-           path: 'about',
-           element: <AboutPage />,
-         },
-       ],
-     },
-   ]);
-
-   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-     <React.StrictMode>
-       <ChakraProvider>
-         <RouterProvider router={router} />
-       </ChakraProvider>
-     </React.StrictMode>,
-   );
-   ```
-
-3. You can start using Chakra UI components in the project.
-
-### Storybook
-
-This repository contains a separate branch of `with-storybook` if you want to integrate Storybook with this starter template.
-
-1. Clone repo using [degit](https://github.com/Rich-Harris/degit)
-
-   ```
-   npx degit hanstanawi/react-ts-starter-template#with-storybook
-   ```
+  ```
+  npx degit hanstanawi/react-ts-starter-template#with-storybook
+  ```
 
 ### Learn More
 
@@ -196,4 +117,3 @@ To learn more about React and TypeScript, take a look at the following resources
 - [Learn React with TypeScript](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup) - learn about integrating React with TypeScript
 - [Learn Testing Library](https://testing-library.com/docs/queries/about/#priority) - learn about Testing Library core queries
 - [React Testing Library tips](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) - tips from Kent C. Dodds about Testing Library
-- [Getting Started with Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/) - a guide to get started with Storybook with React

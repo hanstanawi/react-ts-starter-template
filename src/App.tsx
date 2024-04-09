@@ -1,16 +1,26 @@
-import { Outlet } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Navbar from '@/components/navbar';
+import RootLayout from './components/root-layout';
+import Homepage from './pages/home';
+import NotFoundPage from './pages/not-found';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    errorElement: <NotFoundPage />,
+    children: [
+      {
+        path: '/',
+        element: <Homepage />,
+        index: true,
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <main className="flex min-h-screen items-center justify-center">
-        <Outlet />
-      </main>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

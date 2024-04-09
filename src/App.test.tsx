@@ -1,36 +1,31 @@
+import '@testing-library/jest-dom';
+
 import { render, screen, within } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 
-import App from './App';
+import RootLayout from './components/root-layout';
 import Homepage from './pages/home';
-import LearnMore from './pages/learn-more';
 import NotFoundPage from './pages/not-found';
 
-function renderComponent(index: number = 0) {
-  const router = createMemoryRouter(
+function renderComponent(pageIndex: number = 0) {
+  const memoryRouter = createMemoryRouter(
     [
       {
         path: '/',
-        element: <App />,
+        element: <RootLayout />,
         errorElement: <NotFoundPage />,
         children: [
           {
-            path: '',
+            path: '/',
             element: <Homepage />,
             index: true,
-          },
-          {
-            path: 'learn-more',
-            element: <LearnMore />,
           },
         ],
       },
     ],
-    { initialEntries: ['/', '/learn-more'], initialIndex: index },
+    { initialEntries: ['/', '/sadasdf34'], initialIndex: pageIndex },
   );
-
-  render(<RouterProvider router={router} />);
+  render(<RouterProvider router={memoryRouter} />);
 }
 
 describe('App.tsx', () => {
@@ -49,7 +44,7 @@ describe('App.tsx', () => {
     expect(title).toBeInTheDocument();
   });
 
-  it('should render homepage on "/" route', () => {
+  it('should render homepage content on /', () => {
     renderComponent();
 
     const main = screen.getByRole('main');
@@ -62,52 +57,46 @@ describe('App.tsx', () => {
 
     const reactLink = screen.getByTestId('react-link');
     const reactLogo = within(reactLink).getByRole('img');
+    const tailwindLink = screen.getByTestId('tailwind-link');
+    const tailwindLogo = within(tailwindLink).getByRole('img');
     const tsLink = screen.getByTestId('ts-link');
     const tsLogo = within(tsLink).getByRole('img');
+    const vercelLink = screen.getByTestId('vercel-link');
+    const netlifyLink = screen.getByTestId('netlify-link');
+    const useTemplateLink = screen.getByTestId('use-template-link');
+    const githubLink = screen.getByTestId('repo-link');
 
     expect(title).toHaveTextContent('React + TypeScript');
     expect(subTitle).toHaveTextContent('Starter Template');
     expect(reactLogo).toHaveAttribute('alt', 'React logo');
     expect(reactLink).toHaveAttribute('href', 'https://react.dev');
+    expect(tailwindLogo).toHaveAttribute('alt', 'Tailwind logo');
+    expect(tailwindLink).toHaveAttribute('href', 'https://tailwindcss.com/');
     expect(tsLogo).toHaveAttribute('alt', 'TS logo');
     expect(tsLink).toHaveAttribute('href', 'https://typescriptlang.org');
+    expect(netlifyLink).toBeInTheDocument();
+    expect(vercelLink).toBeInTheDocument();
+    expect(useTemplateLink).toBeInTheDocument();
+    expect(githubLink).toBeInTheDocument();
   });
 
-  it('should render learn-more page on "/learn-more" route', () => {
-    renderComponent(1); // navigate to learn more route
+  it('should render not found page on unknown route', () => {
+    renderComponent(1);
 
-    const main = screen.getByRole('main');
+    // Get not found page title
+    const title = screen.getByRole('heading', { level: 1, name: /oops!/i });
+    const errorText = screen.getByText(
+      /sorry, an unexpected error has occurred./i,
+    );
+    const errorMessage = screen.getByText(/not found/i);
+    const goBackButton = screen.getByRole('button');
+    const goHomeLink = within(goBackButton).getByRole('link');
 
-    // Learn more elements
-    const pageTitle = within(main).getByRole('heading', {
-      level: 1,
-    });
-    const list = within(main).getByRole('list');
-    const listItems = within(main).getAllByRole('listitem');
-
-    expect(pageTitle).toHaveTextContent(/what's inside/i);
-
-    expect(list).toBeInTheDocument();
-    expect(listItems).toHaveLength(14);
-  });
-
-  it('should navigate between pages', async () => {
-    const user = userEvent.setup();
-    renderComponent();
-
-    // First render homepage
-    expect(screen.getByText('React + TypeScript')).toBeInTheDocument();
-
-    // Navigate to learn more link
-    const learnMoreLink = screen.getByRole('link', { name: /learn more/i });
-    await user.click(learnMoreLink);
-
-    expect(screen.getByText("What's inside?")).toBeInTheDocument();
-
-    // Navigate back
-    const homeLink = screen.getByRole('link', { name: /home/i });
-    await user.click(homeLink);
-
-    expect(screen.getByText('React + TypeScript')).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
+    expect(errorText).toBeInTheDocument();
+    expect(errorMessage).toBeInTheDocument();
+    expect(goBackButton).toBeInTheDocument();
+    expect(goHomeLink).toBeInTheDocument();
+    expect(goHomeLink).toHaveAttribute('href', '/');
   });
 });

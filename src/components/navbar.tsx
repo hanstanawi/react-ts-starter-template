@@ -1,4 +1,4 @@
-import { DarkMode } from './dark-mode';
+import DarkMode from './dark-mode';
 
 export default function Navbar() {
   return (

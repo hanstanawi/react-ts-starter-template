@@ -15,7 +15,7 @@ function checkDarkMode(): boolean {
   );
 }
 
-export function DarkMode() {
+export default function DarkMode() {
   const [isDark, setIsDark] = useState(false);
 
   const toggleMode = useCallback((): void => {
@@ -44,7 +44,11 @@ export function DarkMode() {
       className="rounded-full bg-transparent p-2 outline-0 dark:bg-transparent"
       onClick={toggleMode}
     >
-      {isDark ? <MoonIcon size={24} /> : <SunIcon size={24} />}
+      {isDark ? (
+        <MoonIcon data-testid="moon-icon" size={24} />
+      ) : (
+        <SunIcon data-testid="sun-icon" size={24} />
+      )}
     </Button>
   );
 }

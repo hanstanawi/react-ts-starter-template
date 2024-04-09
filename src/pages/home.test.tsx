@@ -1,5 +1,4 @@
 import { render, screen, within } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 
 import Homepage from './home';
@@ -26,32 +25,46 @@ describe('home.tsx', () => {
 
     const reactLink = screen.getByTestId('react-link');
     const reactLogo = within(reactLink).getByRole('img');
+    const tailwindLink = screen.getByTestId('tailwind-link');
+    const tailwindLogo = within(tailwindLink).getByRole('img');
     const tsLink = screen.getByTestId('ts-link');
     const tsLogo = within(tsLink).getByRole('img');
 
     expect(reactLogo).toHaveAttribute('alt', 'React logo');
     expect(reactLink).toHaveAttribute('href', 'https://react.dev');
+    expect(tailwindLogo).toHaveAttribute('alt', 'Tailwind logo');
+    expect(tailwindLink).toHaveAttribute('href', 'https://tailwindcss.com/');
     expect(tsLogo).toHaveAttribute('alt', 'TS logo');
     expect(tsLink).toHaveAttribute('href', 'https://typescriptlang.org');
   });
 
-  it('should render a count button', () => {
+  it('should display title', () => {
     renderComponent();
 
-    const button = screen.getByRole('button', { name: /count is 0/ });
+    const mainTitle = screen.getByRole('heading', {
+      level: 1,
+      name: 'React + TypeScript',
+    });
+    const subTitle = screen.getByRole('heading', {
+      level: 2,
+      name: /starter template/i,
+    });
 
-    expect(button).toBeInTheDocument();
+    expect(mainTitle).toBeInTheDocument();
+    expect(subTitle).toBeInTheDocument();
   });
 
-  it('should increment count button', async () => {
-    const user = userEvent.setup();
+  it('should display the description of the page', async () => {
     renderComponent();
 
-    const countButton = screen.getByRole('button', { name: /count is 0/i });
-    await user.click(countButton);
-    expect(countButton).toHaveTextContent(/count is 1/i);
+    const vercelLink = screen.getByTestId('vercel-link');
+    const netlifyLink = screen.getByTestId('netlify-link');
+    const useTemplateLink = screen.getByTestId('use-template-link');
+    const githubLink = screen.getByTestId('repo-link');
 
-    await user.click(countButton);
-    expect(countButton).toHaveTextContent(/count is 2/i);
+    expect(netlifyLink).toBeInTheDocument();
+    expect(vercelLink).toBeInTheDocument();
+    expect(useTemplateLink).toBeInTheDocument();
+    expect(githubLink).toBeInTheDocument();
   });
 });

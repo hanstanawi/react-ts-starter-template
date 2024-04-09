@@ -10,7 +10,8 @@ export default function CTA() {
         <Link
           aria-label="Deploy to Vercel"
           rel="noopener noreferrer"
-          to="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsozonome%2Fnextarter-chakra"
+          data-testid="vercel-link"
+          to="https://vercel.com/new/clone?repository-url=https://github.com/hanstanawi/react-ts-starter-template"
         >
           <img
             src="https://vercel.com/button"
@@ -22,7 +23,8 @@ export default function CTA() {
         <Link
           aria-label="Deploy to Netlify"
           rel="noopener noreferrer"
-          to="https://app.netlify.com/start/deploy?repository=https://github.com/sozonome/nextarter-chakra"
+          data-testid="netlify-link"
+          to="https://app.netlify.com/start/deploy?repository=https://github.com/hanstanawi/react-ts-starter-template"
         >
           <img
             src="https://www.netlify.com/img/deploy/button.svg"
@@ -36,6 +38,7 @@ export default function CTA() {
           to="https://github.com/hanstanawi/react-ts-starter-template/generate"
           target="_blank"
           rel="noopener noreferrer"
+          data-testid="use-template-link"
         >
           <Button className="rounded-md border-gray-200 text-sm dark:border-none">
             Use This Template
@@ -45,6 +48,7 @@ export default function CTA() {
           to="https://github.com/hanstanawi/react-ts-starter-template"
           target="_blank"
           rel="noopener noreferrer"
+          data-testid="repo-link"
         >
           <Button className="flex items-center gap-x-2 rounded-md border-gray-200 text-sm dark:border-none">
             <LucideGithub size={16} className="inline" />

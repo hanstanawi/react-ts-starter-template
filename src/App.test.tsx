@@ -37,7 +37,7 @@ describe('App.tsx', () => {
     // Homepage Title
     const title = screen.getByRole('heading', {
       level: 1,
-      name: 'React + TypeScript',
+      name: 'React + TypeScript with React Query',
     });
 
     expect(navbar).toBeInTheDocument();
@@ -61,12 +61,14 @@ describe('App.tsx', () => {
     const tailwindLogo = within(tailwindLink).getByRole('img');
     const tsLink = screen.getByTestId('ts-link');
     const tsLogo = within(tsLink).getByRole('img');
+    const reactQueryLink = screen.getByTestId('react-query-link');
+    const reactQueryLogo = within(reactQueryLink).getByRole('img');
     const vercelLink = screen.getByTestId('vercel-link');
     const netlifyLink = screen.getByTestId('netlify-link');
     const useTemplateLink = screen.getByTestId('use-template-link');
     const githubLink = screen.getByTestId('repo-link');
 
-    expect(title).toHaveTextContent('React + TypeScript');
+    expect(title).toHaveTextContent('React + TypeScript with React Query');
     expect(subTitle).toHaveTextContent('Starter Template');
     expect(reactLogo).toHaveAttribute('alt', 'React logo');
     expect(reactLink).toHaveAttribute('href', 'https://react.dev');
@@ -74,6 +76,11 @@ describe('App.tsx', () => {
     expect(tailwindLink).toHaveAttribute('href', 'https://tailwindcss.com/');
     expect(tsLogo).toHaveAttribute('alt', 'TS logo');
     expect(tsLink).toHaveAttribute('href', 'https://typescriptlang.org');
+    expect(reactQueryLogo).toHaveAttribute('alt', 'React Query logo');
+    expect(reactQueryLink).toHaveAttribute(
+      'href',
+      'https://tanstack.com/query',
+    );
     expect(netlifyLink).toBeInTheDocument();
     expect(vercelLink).toBeInTheDocument();
     expect(useTemplateLink).toBeInTheDocument();

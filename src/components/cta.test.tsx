@@ -73,7 +73,7 @@ describe('cta.tsx', () => {
     expect(githubButton).toBeInTheDocument();
     expect(githubLink).toHaveAttribute(
       'href',
-      'https://github.com/hanstanawi/react-ts-starter-template',
+      'https://github.com/hanstanawi/react-ts-starter-template/tree/with-react-query',
     );
   });
 });

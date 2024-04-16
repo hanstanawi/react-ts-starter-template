@@ -45,7 +45,7 @@ export default function CTA() {
           </Button>
         </Link>
         <Link
-          to="https://github.com/hanstanawi/react-ts-starter-template"
+          to="https://github.com/hanstanawi/react-ts-starter-template/tree/with-react-query"
           target="_blank"
           rel="noopener noreferrer"
           data-testid="repo-link"

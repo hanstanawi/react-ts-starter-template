@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import reactLogo from '@/assets/react.svg';
+import reactQueryLogo from '@/assets/react-query.svg';
 import tailwindLogo from '@/assets/tailwind.svg';
 import tsLogo from '@/assets/ts.svg';
 import CTA from '@/components/cta';
@@ -35,17 +36,31 @@ export default function Homepage() {
           rel="noreferrer"
           data-testid="ts-link"
         >
-          <img src={tsLogo} className="w-12" alt="TS logo" />
+          <img src={tsLogo} className="w-12 " alt="TS logo" />
+        </Link>
+        <Link
+          to="https://tanstack.com/query"
+          target="_blank"
+          rel="noreferrer"
+          data-testid="react-query-link"
+        >
+          <img
+            src={reactQueryLogo}
+            className="w-14 animate-spin-slow"
+            alt="React Query logo"
+          />
         </Link>
       </div>
       <div className="text-center">
-        <h1 className="text-2xl font-bold">React + TypeScript</h1>
+        <h1 className="text-2xl font-bold">
+          React + TypeScript with React Query
+        </h1>
         <h2 className="text-xl font-bold">Starter Template</h2>
       </div>
 
       <p className="mt-4 text-center text-sm opacity-60 dark:opacity-80">
-        A starter template to kickstart your React and TypeScript frontend
-        project
+        A starter template to kickstart your React and TypeScript with React
+        Query frontend project
       </p>
       <CTA />
     </div>

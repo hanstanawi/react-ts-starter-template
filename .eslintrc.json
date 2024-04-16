@@ -10,6 +10,7 @@
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:testing-library/react",
+    "plugin:@tanstack/eslint-plugin-query/recommended",
     "plugin:jest-dom/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended"

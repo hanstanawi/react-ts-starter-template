@@ -107,6 +107,16 @@ This repository contains separate branches of other starter template kits
   npx degit hanstanawi/react-ts-starter-template#with-storybook
   ```
 
+- React Query
+
+  Integrate React Query with this starter template. Checkout `with-react-query` branch to view.
+
+  Clone repo using [degit](https://github.com/Rich-Harris/degit)
+
+  ```
+  npx degit hanstanawi/react-ts-starter-template#with-react-query
+  ```
+
 ### Learn More
 
 To learn more about React and TypeScript, take a look at the following resources:

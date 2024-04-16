@@ -4,6 +4,7 @@
   "engines": {
     "node": ">= 18.x"
   },
+  "type": "module",
   "description": "React + TypeScript starter template",
   "keywords": [
     "react",

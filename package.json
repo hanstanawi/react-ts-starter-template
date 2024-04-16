@@ -4,6 +4,7 @@
   "engines": {
     "node": ">= 18.x"
   },
+  "type": "module",
   "description": "React + TypeScript starter template",
   "keywords": [
     "react",
@@ -23,7 +24,7 @@
   "license": "MIT",
   "author": "Hans Tanawi <hans.tanawi@outlook.com>",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",

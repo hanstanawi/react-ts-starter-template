@@ -2,9 +2,9 @@
   <img alt="banner" src="public/banner.png" width="100%" />
 </div>
 <h1 align="center">
-  React + TypeScript Starter Template
+  React + TypeScript with Storybook Starter Template
 </h1>
-<p align="center">React starter template with TypeScript and TailwindCSS to kickstart your frontend project.</p>
+<p align="center">React starter template with TypeScript, TailwindCSS, and Storybook to kickstart your frontend project.</p>
 
 ### What's inside?
 

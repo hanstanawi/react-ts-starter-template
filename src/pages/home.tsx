@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import reactLogo from '@/assets/react.svg';
+import storybookLogo from '@/assets/storybook.svg';
 import tailwindLogo from '@/assets/tailwind.svg';
 import tsLogo from '@/assets/ts.svg';
 import CTA from '@/components/cta';
@@ -37,15 +38,25 @@ export default function Homepage() {
         >
           <img src={tsLogo} className="w-12" alt="TS logo" />
         </Link>
+        <Link
+          to="https://storybook.js.org/"
+          target="_blank"
+          rel="noreferrer"
+          data-testid="storybook-link"
+        >
+          <img src={storybookLogo} className="w-11" alt="Storybook logo" />
+        </Link>
       </div>
       <div className="text-center">
-        <h1 className="text-2xl font-bold">React + TypeScript</h1>
+        <h1 className="text-2xl font-bold">
+          React + TypeScript with Storybook
+        </h1>
         <h2 className="text-xl font-bold">Starter Template</h2>
       </div>
 
       <p className="mt-4 text-center text-sm opacity-60 dark:opacity-80">
-        A starter template to kickstart your React and TypeScript frontend
-        project
+        A starter template to kickstart your React and TypeScript with Storybook
+        frontend project
       </p>
       <CTA />
     </div>

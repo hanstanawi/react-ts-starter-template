@@ -59,7 +59,7 @@ importers:
         version: 6.21.0(eslint@8.57.1)(typescript@5.6.3)
       '@vitejs/plugin-react':
         specifier: ^4.3.2
-        version: 4.3.2(vite@5.4.2(@types/node@20.8.9))
+        version: 4.3.2(vite@5.4.8(@types/node@20.8.9))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
@@ -130,11 +130,11 @@ importers:
         specifier: ^5.6.3
         version: 5.6.3
       vite:
-        specifier: ^5.4.2
-        version: 5.4.2(@types/node@20.8.9)
+        specifier: ^5.4.8
+        version: 5.4.8(@types/node@20.8.9)
       vite-tsconfig-paths:
         specifier: ^5.0.1
-        version: 5.0.1(typescript@5.6.3)(vite@5.4.2(@types/node@20.8.9))
+        version: 5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@20.8.9))
       whatwg-fetch:
         specifier: ^3.6.20
         version: 3.6.20
@@ -3514,8 +3514,8 @@ packages:
       vite:
         optional: true
 
-  vite@5.4.2:
-    resolution: {integrity: sha512-dDrQTRHp5C1fTFzcSaMxjk6vdpKvT+2/mIdE07Gw2ykehT49O0z/VHS3zZ8iV/Gh8BJJKHWOe5RjaNrW5xf/GA==}
+  vite@5.4.8:
+    resolution: {integrity: sha512-FqrItQ4DT1NC4zCUqMB4c4AZORMKIa0m8/URVCZ77OZ/QSNeJ54bU1vrFADbDsuwfIPcgknRkmqakQcgnL4GiQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -4495,7 +4495,7 @@ snapshots:
 
   '@testing-library/dom@10.0.0':
     dependencies:
-      '@babel/code-frame': 7.24.2
+      '@babel/code-frame': 7.25.7
       '@babel/runtime': 7.24.4
       '@types/aria-query': 5.0.3
       aria-query: 5.3.0
@@ -4769,14 +4769,14 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react@4.3.2(vite@5.4.2(@types/node@20.8.9))':
+  '@vitejs/plugin-react@4.3.2(vite@5.4.8(@types/node@20.8.9))':
     dependencies:
       '@babel/core': 7.25.8
       '@babel/plugin-transform-react-jsx-self': 7.25.7(@babel/core@7.25.8)
       '@babel/plugin-transform-react-jsx-source': 7.25.7(@babel/core@7.25.8)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.2(@types/node@20.8.9)
+      vite: 5.4.8(@types/node@20.8.9)
     transitivePeerDependencies:
       - supports-color
 
@@ -7569,18 +7569,18 @@ snapshots:
       '@types/istanbul-lib-coverage': 2.0.5
       convert-source-map: 2.0.0
 
-  vite-tsconfig-paths@5.0.1(typescript@5.6.3)(vite@5.4.2(@types/node@20.8.9)):
+  vite-tsconfig-paths@5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@20.8.9)):
     dependencies:
       debug: 4.3.6
       globrex: 0.1.2
       tsconfck: 3.0.3(typescript@5.6.3)
     optionalDependencies:
-      vite: 5.4.2(@types/node@20.8.9)
+      vite: 5.4.8(@types/node@20.8.9)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.4.2(@types/node@20.8.9):
+  vite@5.4.8(@types/node@20.8.9):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47

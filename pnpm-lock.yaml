@@ -133,8 +133,8 @@ importers:
         specifier: ^5.4.10
         version: 5.4.10(@types/node@20.8.9)
       vite-tsconfig-paths:
-        specifier: ^5.0.1
-        version: 5.0.1(typescript@5.6.3)(vite@5.4.10(@types/node@20.8.9))
+        specifier: ^5.1.0
+        version: 5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.8.9))
       whatwg-fetch:
         specifier: ^3.6.20
         version: 3.6.20
@@ -3394,8 +3394,8 @@ packages:
     resolution: {integrity: sha512-9lDD+EVI2fjFsMWXc6dy5JJzBsVTcQ2fVkfBvncZ6xJWG9wtBhOldG+mHkSL0+V1K/xgZz0JDO5UT5hFwHUghg==}
     engines: {node: '>=10.12.0'}
 
-  vite-tsconfig-paths@5.0.1:
-    resolution: {integrity: sha512-yqwv+LstU7NwPeNqajZzLEBVpUFU6Dugtb2P84FXuvaoYA+/70l9MHE+GYfYAycVyPSDYZ7mjOFuYBRqlEpTig==}
+  vite-tsconfig-paths@5.1.0:
+    resolution: {integrity: sha512-Y1PLGHCJfAq1Zf4YIGEsmuU/NCX1epoZx9zwSr32Gjn3aalwQHRKr5aUmbo6r0JHeHkqmWpmDg7WOynhYXw1og==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -7280,7 +7280,7 @@ snapshots:
       '@types/istanbul-lib-coverage': 2.0.5
       convert-source-map: 2.0.0
 
-  vite-tsconfig-paths@5.0.1(typescript@5.6.3)(vite@5.4.10(@types/node@20.8.9)):
+  vite-tsconfig-paths@5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.8.9)):
     dependencies:
       debug: 4.3.6
       globrex: 0.1.2

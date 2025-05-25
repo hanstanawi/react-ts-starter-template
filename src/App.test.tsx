@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 
 import { render, screen, within } from '@testing-library/react';
-import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { createMemoryRouter, RouterProvider } from 'react-router';
 
 import RootLayout from './components/root-layout';
 import Homepage from './pages/home';

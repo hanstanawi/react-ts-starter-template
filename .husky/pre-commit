@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 echo 'Styling your project before committing'
 echo 'please be patient, this may take a while...'
  

@@ -17,7 +17,7 @@ export default function Homepage() {
         >
           <img
             src={reactLogo}
-            className="w-14 animate-spin-slow"
+            className="animate-spin-slow w-14"
             alt="React logo"
           />
         </Link>

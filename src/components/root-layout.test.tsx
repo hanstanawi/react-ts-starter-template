@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { createRoutesStub } from 'react-router';
 
 import RootLayout from './root-layout';
 
@@ -13,15 +13,20 @@ function TestComponent() {
 
 describe('RootLayout.tsx', () => {
   it('should render the outlet children component for react router', () => {
-    render(
-      <MemoryRouter initialEntries={['/']}>
-        <Routes>
-          <Route element={<RootLayout />}>
-            <Route path="/" element={<TestComponent />} />
-          </Route>
-        </Routes>
-      </MemoryRouter>,
-    );
+    const StubComponent = createRoutesStub([
+      {
+        path: '/',
+        Component: RootLayout, // Use 'Component' instead of 'element' here
+        children: [
+          {
+            index: true, // Use 'index: true' for the child route that matches the parent's path
+            Component: TestComponent,
+          },
+        ],
+      },
+    ]);
+
+    render(<StubComponent />);
 
     const testComponentTitle = screen.getByRole('heading', {
       level: 1,
